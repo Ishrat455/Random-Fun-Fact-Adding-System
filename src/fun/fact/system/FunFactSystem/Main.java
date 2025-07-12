@@ -12,13 +12,13 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Ovi
+ * @author Fabiha
  */
 public class Main extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("SignUp.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
         
         Scene scene = new Scene(root);
         

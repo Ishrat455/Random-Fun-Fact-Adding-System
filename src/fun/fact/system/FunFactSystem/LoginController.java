@@ -19,11 +19,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.io.IOException;
-import javafx.scene.control.Hyperlink;
 
 /**
  * FXML Controller class
@@ -38,12 +38,12 @@ public class LoginController implements Initializable {
     private PasswordField password;
     @FXML
     private Button loginB;
+    @FXML
+    private Hyperlink Signup;
 
     private static final String DB_URL = "jdbc:mysql://localhost:3306/fun_fact_system";
     private static final String DB_USER = "root"; 
     private static final String DB_PASS = "";     
-    @FXML
-    private Hyperlink Signup;
 
     /**
      * Initializes the controller class.
@@ -54,6 +54,7 @@ public class LoginController implements Initializable {
         Signup.setOnAction(this::handleSignupLink);
     }    
     
+    @FXML
     private void handleLogin(ActionEvent event) {
         String userEmail = login.getText().trim();
         String userPass = password.getText();
@@ -77,6 +78,8 @@ public class LoginController implements Initializable {
                 if (userPass.equals(storedPassword)) {
                     showAlert(Alert.AlertType.INFORMATION, "Success", "Login successful!");
                     navigateToDashboard();
+                    Session session = new Session();
+                    session.setEmail(userEmail);
                 } else {
                     showAlert(Alert.AlertType.ERROR, "Login Error", "Incorrect password");
                 }
