@@ -62,6 +62,7 @@ public class DashBoardController implements Initializable {
 
         // Logobut hyperlink action to open login window
         Logobut.setOnAction(event -> openLoginWindow());
+        
     }
 
     private void saveFunFact() {
@@ -96,10 +97,10 @@ public class DashBoardController implements Initializable {
 
     private void openYourFunFactsWindow() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("FunFact.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("MyAllFact.fxml"));
             Stage stage = new Stage();
             stage.setScene(new Scene(loader.load()));
-            stage.setTitle("Your Fun Facts");
+            stage.setTitle("My Fun Facts");
             stage.show();
         } catch (Exception e) {
             showAlert(Alert.AlertType.ERROR, "Error", "Error opening Your Fun Facts window: " + e.getMessage());

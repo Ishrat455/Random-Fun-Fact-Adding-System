@@ -13,7 +13,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * Database Connection Utility class using DriverManager
+ * FXML Controller class
+ *
+ * @author Fabiha
  */
 public class DatabaseConnection {
     
