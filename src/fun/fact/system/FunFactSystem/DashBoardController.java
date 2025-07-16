@@ -62,6 +62,7 @@ public class DashBoardController implements Initializable {
 
         // Logobut hyperlink action to open login window
         Logobut.setOnAction(event -> openLoginWindow());
+        PublicFunFact.setOnAction(event -> openPublicFunFactWindow());
         
     }
 
@@ -104,6 +105,19 @@ public class DashBoardController implements Initializable {
             stage.show();
         } catch (Exception e) {
             showAlert(Alert.AlertType.ERROR, "Error", "Error opening Your Fun Facts window: " + e.getMessage());
+        }
+    }
+    
+    
+    private void openPublicFunFactWindow() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("PublicFunFact.fxml"));
+            Stage stage = new Stage();
+            stage.setScene(new Scene(loader.load()));
+            stage.setTitle("Public Fun Fact");
+            stage.show();
+        } catch (Exception e) {
+            showAlert(Alert.AlertType.ERROR, "Error", "Error opening Public Fun Fact window: " + e.getMessage());
         }
     }
 

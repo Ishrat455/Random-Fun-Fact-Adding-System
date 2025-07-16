@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="fun.fact.system.FunFactSystem.PublicFunFactController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <ScrollPane layoutX="0.0" layoutY="0.0" prefWidth="600.0" prefHeight="400.0" fitToWidth="true">
+        <VBox fx:id="cardContainer" spacing="10" style="-fx-padding: 20;">
+            <!-- Cards will be dynamically added here -->
+        </VBox>
+    </ScrollPane>
+
+</AnchorPane>
