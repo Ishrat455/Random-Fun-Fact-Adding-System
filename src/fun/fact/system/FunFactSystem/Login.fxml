@@ -4,12 +4,19 @@
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="283.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fun.fact.system.FunFactSystem.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="283.0" prefWidth="415.0" styleClass="root" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fun.fact.system.FunFactSystem.LoginController">
    <children>
+      <ImageView fitHeight="240.0" fitWidth="297.0" layoutX="63.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../image/Background%20Image.jpg" />
+         </image>
+      </ImageView>
       <Text layoutX="182.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
          <font>
             <Font size="20.0" />

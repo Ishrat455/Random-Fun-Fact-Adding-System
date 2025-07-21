@@ -4,17 +4,24 @@
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fun.fact.system.FunFactSystem.DashBoardController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fun.fact.system.FunFactSystem.DashBoardController">
    <children>
-      <Text layoutX="226.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fun Facts Dashboard">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Text>
+      <Pane layoutY="333.0" prefHeight="68.0" prefWidth="600.0" style="-fx-border: 2px; -fx-border-color: blue;">
+         <children>
+            <Hyperlink fx:id="Logobut" layoutX="505.0" layoutY="23.0" text="Logout" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="413.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../image/Bc%20image.jpg" />
+         </image>
+      </ImageView>
       <TextField fx:id="title" layoutX="116.0" layoutY="77.0" prefHeight="36.0" prefWidth="341.0" promptText="Title">
          <font>
             <Font size="13.0" />
@@ -22,7 +29,6 @@
       </TextField>
       <TextArea fx:id="Content" layoutX="116.0" layoutY="121.0" prefHeight="128.0" prefWidth="341.0" promptText="Content" />
       <Button fx:id="add" layoutX="235.0" layoutY="263.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="103.0" text="Add fun fact" />
-      <Hyperlink fx:id="Logobut" layoutX="519.0" layoutY="354.0" text="Logout" />
       <Hyperlink fx:id="YourFunFact" layoutX="202.0" layoutY="354.0" text="Your Fun Fact" />
       <Hyperlink fx:id="PublicFunFact" layoutX="299.0" layoutY="354.0" text="Public Fun Fact" />
    </children>
